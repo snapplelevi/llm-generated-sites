@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Federal Student Aid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Cambria, serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            padding: 2rem;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 1.0rem; /* Increased from 0.5rem */
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            color: #1B4D78;
+            font-size: 1.75rem;
+        }
+
+        .header-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: Cambria, serif;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #1B4D78;
+        }
+
+        .show-password {
+            position: absolute;
+            right: 0;
+            top: 2.5rem;
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            padding: 0 0.75rem;
+            font-size: 0.875rem;
+            font-family: Cambria, serif;
+        }
+
+        .button {
+            background: #3D6791;  /* 20% lighter blue */
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 600;
+            font-family: Cambria, serif;
+        }
+
+        .button:hover {
+            background: #325779;
+        }
+
+        .links {
+            margin-top: 1.5rem;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            padding-top: 1.5rem;
+        }
+
+        .forgot-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .forgot-links a {
+            color: #1B4D78;
+            text-decoration: none;
+            padding: 0 1rem;
+        }
+
+        .forgot-links a:first-child {
+            border-right: 1px solid #ccc;
+        }
+
+        .create-account {
+            color: #1B4D78;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .help-link {
+            color: #1B4D78;
+            text-decoration: underline;
+            display: block;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .help-link:hover {
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="header">
+            <h1>Log In</h1>
+            <img src="arrow.png" alt="Login arrow" class="header-icon">
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="username">Email, Phone, or FSA ID Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <button type="button" class="show-password" onclick="togglePassword()">Show Password</button>
+            </div>
+            
+            <button type="submit" class="button">Log In</button>
+            
+            <div class="links">
+                <div class="forgot-links">
+                    <a href="#">Forgot My Username</a>
+                    <a href="#">Forgot My Password</a>
+                </div>
+                <a href="#" class="create-account">Create an Account</a>
+            </div>
+        </form>
+    </main>
+    <a href="#" class="help-link">Help Me Log In To My Account</a>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const showPasswordButton = document.querySelector('.show-password');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                showPasswordButton.textContent = 'Hide Password';
+            } else {
+                passwordInput.type = 'password';
+                showPasswordButton.textContent = 'Show Password';
+            }
+        }
+    </script>
+</body>
+</html>

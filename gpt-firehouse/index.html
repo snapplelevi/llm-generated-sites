@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Firehouse Subs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="close-button-container">
+        <span class="close-button">✕</span>
+    </div>
+    <div class="logo-container">
+        <img src="firehouse-logo.png" alt="Firehouse Subs Logo" class="logo">
+        <p class="instruction-text">Enter your email address<br>Then proceed to log in or register</p>
+    </div>
+    <div class="login-container">
+        <form action="#" method="post" class="login-form">
+            <div class="form-group">
+                <label for="email"><strong>Email Address <span class="required">*</span></strong></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group agreement">
+                <input type="checkbox" id="agreement" name="agreement" required onclick="toggleButton()">
+                <label for="agreement">
+                    By checking this box, you acknowledge that you have read and agree to our
+                    <a href="#" class="rose-red">Terms of Service</a> including the mandatory arbitration clause,
+                    <a href="#" class="rose-red">Privacy Policy</a>, and
+                    <a href="#" class="rose-red">Firehouse Rewards Terms</a>.
+                </label>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="login-button" disabled>Sign Up / Login</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function toggleButton() {
+            const checkbox = document.getElementById("agreement");
+            const button = document.querySelector(".login-button");
+            if (checkbox.checked) {
+                button.disabled = false;
+                button.classList.add("active");
+            } else {
+                button.disabled = true;
+                button.classList.remove("active");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #15202b;
+    color: #d9d9d9;
+  }
+  
+  .login-container {
+    width: 500px; /* Wider background */
+    padding: 2rem;
+    background-color: #000000;
+    border-radius: 8px;
+    text-align: center;
+    position: relative; /* Positioning for the X icon */
+  }
+  
+  /* Top-left white "X" in Nunito font */
+  .top-left-icon {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+  
+  .top-left-icon a {
+    font-family: 'Nunito', sans-serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* Logo styling */
+  .logo img {
+    width: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Larger "Sign in to X" heading */
+  .left-align-heading {
+    text-align: left;
+    font-size: 1.8rem; /* Increased font size */
+    font-weight: 700;
+    margin-left: 10%; /* Aligned with button width */
+    margin-bottom: 1.5rem; /* Added spacing below heading */
+  }
+  
+  /* External login buttons */
+  .external-login {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 80%; /* Matches width of input and buttons */
+    margin: 0 auto;
+    margin-bottom: 2rem; /* Additional space between external-login buttons and heading */
+    text-align: left;
+  }
+  
+  .external-login button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 999px; /* Rounded rectangular oval shape */
+    cursor: pointer;
+  }
+  
+  .external-login button img {
+    width: 20px; /* Set a suitable width for the logos */
+    height: 20px;
+    margin-right: 0.5rem;
+  }
+  
+  /* Divider with "or" */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #8899a6;
+    margin: 1rem 0;
+  }
+  
+  .divider hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #38444d;
+  }
+  
+  .divider span {
+    font-size: 0.9rem;
+  }
+  
+  /* Login form */
+  .login-form input[type="text"] {
+    width: 80%; /* Matches button width */
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: 0; /* Removed rounded corners */
+    border: 1px solid #38444d;
+    background-color: #000000; /* Set background to black */
+    color: #d9d9d9;
+    font-size: 1rem;
+    margin-bottom: 2rem; /* Added spacing between input and "Next" button */
+  }
+  
+  .login-form input::placeholder {
+    color: #8899a6;
+  }
+  
+  /* Adjusted widths for Next and Forgot Password buttons */
+  .form-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem; /* Original spacing between Next and Forgot Password buttons */
+  }
+  
+  .next-btn,
+  .forgot-password-btn {
+    width: 80%; /* Matches input field and external-login buttons width */
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 999px; /* Rounded rectangular oval shape */
+  }
+  
+  .next-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+  }
+  
+  .next-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .forgot-password-btn {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #38444d;
+    margin-bottom: 2rem; /* Larger space before "Don't have an account?" text */
+  }
+  
+  .forgot-password-btn:hover {
+    background-color: #333333;
+  }
+  
+  /* Links */
+  .links {
+    font-size: 0.9rem;
+  }
+  
+  .left-align-links {
+    width: 80%; /* Left align with input and buttons */
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .left-align-links span {
+    color: #8899a6;
+  }
+  
+  .left-align-links a {
+    color: #1da1f2;
+    text-decoration: none;
+  }
+  
+  .left-align-links a:hover {
+    text-decoration: underline;
+  }
+  

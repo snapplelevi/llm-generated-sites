@@ -1,0 +1,221 @@
+/* General font and body styling */
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Input fields as rectangles with dark gray border */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 0; /* Removed border radius */
+    background-color: transparent;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+/* Center-aligned Checkbox */
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.keep-signed-in {
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.keep-signed-in input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center; /* Ensures content is vertically centered */
+}
+
+.password-container input[type="password"] {
+    flex: 1; /* Ensures the input field fills the available space */
+    padding-right: 50px; /* Space for the Show button */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    display: flex; /* Centers the button’s content vertically */
+    align-items: center; /* Ensures the text inside the button is centered */
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #888;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    line-height: 1;
+}
+
+/* Buttons with consistent larger border-radius */
+button {
+    border-radius: 20px;
+}
+
+/* Sign-in button styling */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #d2232a;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #b71d24;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.forgot-password a {
+    color: #666;
+    text-decoration: underline;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Divider with "or" */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #ddd;
+    margin: 0 10px;
+    max-width: calc(50% - 30px); /* Limits the line length to fit within the boundaries of the input fields */
+}
+
+/* Alternative button styles */
+.alt-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-weight: normal; /* Unbolded text for Create Account button */
+}
+
+.red-button {
+    background-color: #d2232a;
+    color: white;
+}
+
+.red-button:hover {
+    background-color: #b71d24;
+}
+
+.create-account-button {
+    background-color: white;
+    color: black;
+    border: 1px solid #555;
+}
+
+.create-account-button:hover {
+    background-color: #f9f9f9;
+}
+
+/* Info link for passkey explanation */
+.info-link {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.info-link a {
+    color: #666;
+    text-decoration: underline;
+}
+
+/* Spacer for extra space between elements */
+.spacer {
+    height: 20px;
+}
+
+/* Agreement text section */
+.agreement-text {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.agreement-text p {
+    margin: 5px 0;
+}
+
+.agreement-text a {
+    color: #0066cc; /* Blue color for links */
+    text-decoration: underline;
+}
+
+.agreement-text a:hover {
+    color: #0044aa; /* Darker blue on hover */
+}

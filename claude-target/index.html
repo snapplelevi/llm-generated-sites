@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to your Target account</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .logo {
+            margin-bottom: 2rem;
+            width: 50px;
+            height: 50px;
+        }
+
+        .container {
+            max-width: 480px;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .keep-signed-in {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+            color: #333;
+            gap: 4px;
+        }
+
+        .keep-signed-in input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+
+        .info-icon {
+            width: 16px;
+            height: 16px;
+            border: 1.5px solid #666;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #666;
+            cursor: help;
+            margin-left: 4px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: -8%;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #333;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 0.875rem;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 120%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            margin-left: -10%;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #cc0000;
+        }
+
+        input[type="email"]::placeholder,
+        input[type="password"]::placeholder {
+            color: #666;
+        }
+
+        .sign-in-button {
+            width: 120%;
+            padding: 0.75rem;
+            background-color: #cc0000;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-bottom: 1rem;
+            margin-left: -10%;
+        }
+
+        .sign-in-button:hover {
+            background-color: #990000;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 1.5rem 0;
+            color: #666;
+            width: 120%;
+            margin-left: -10%;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .divider span {
+            padding: 0 1rem;
+            font-size: 0.875rem;
+        }
+
+        .passkey-button {
+            width: 120%;
+            padding: 0.75rem;
+            background-color: #cc0000;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-bottom: 1rem;
+            margin-left: -10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .passkey-button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .passkey-button:hover {
+            background-color: #990000;
+        }
+
+        .create-account-button {
+            width: 120%;
+            padding: 0.75rem;
+            background-color: white;
+            color: #666;
+            border: 1px solid #666;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin: 1.5rem 0;
+            margin-left: -10%;
+        }
+
+        .create-account-button:hover {
+            background-color: #f5f5f5;
+        }
+
+        .helper-text {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .helper-text a {
+            color: #cc0000;
+            text-decoration: underline;
+            font-size: 0.875rem;
+        }
+
+        .terms-text {
+            text-align: center;
+            color: #666;
+            font-size: 0.75rem;
+            line-height: 1.5;
+            margin-top: 2rem;
+        }
+
+        .terms-text p {
+            margin-bottom: 0.5rem;
+        }
+
+        .terms-text a {
+            color: #cc0000;
+            text-decoration: underline;
+        }
+
+        .terms-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <!-- Outer circle -->
+            <circle cx="50" cy="50" r="45" fill="#CC0000"/>
+            <!-- Inner circle -->
+            <circle cx="50" cy="50" r="32" fill="#FFFFFF"/>
+            <!-- Center circle -->
+            <circle cx="50" cy="50" r="19" fill="#CC0000"/>
+        </svg>
+    </div>
+
+    <main class="container">
+        <h1>Sign into your Target account</h1>
+        
+        <div class="keep-signed-in">
+            <input type="checkbox" id="keep-signed-in" name="keep-signed-in">
+            <label for="keep-signed-in">Keep me signed in</label>
+            <div class="info-icon">i</div>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email or mobile phone" required>
+            </div>
+
+            <div class="form-group">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <button type="button" class="password-toggle" onclick="togglePassword()">show</button>
+            </div>
+
+            <button type="submit" class="sign-in-button">Sign in with Password</button>
+
+            <div class="helper-text">
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <div class="divider">
+                <span>or</span>
+            </div>
+
+            <button type="button" class="passkey-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
+                </svg>
+                Use a passkey instead
+            </button>
+
+            <div class="helper-text">
+                <a href="#">What's a passkey?</a>
+            </div>
+
+            <button type="button" class="create-account-button">Create your Target account</button>
+
+            <div class="terms-text">
+                <p>By signing in, you agree to the following:</p>
+                <p><a href="#">Target terms and conditions</a></p>
+                <p><a href="#">Target privacy policy</a></p>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleButton = document.querySelector('.password-toggle');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleButton.textContent = 'hide';
+            } else {
+                passwordInput.type = 'password';
+                toggleButton.textContent = 'show';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page Replica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h2 class="login-title">Log In</h2>
+                <img src="login-thing.png" alt="Login Icon" class="login-icon">
+            </div>
+            <form action="/login" method="post">
+                <label for="username">Email, Phone, or FSA ID Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" required>
+                    <span class="show-password" onclick="togglePassword()">Show Password</span>
+                </div>
+
+                <button type="submit" class="login-button">Log In</button>
+
+                <div class="extra-options">
+                    <a href="#">Forgot My Username</a>
+                    <span class="separator">|</span>
+                    <a href="#">Forgot My Password</a>
+                </div>
+            </form>
+        </div>
+
+        <footer class="login-footer">
+            <p><a href="#">Create an Account</a></p>
+        </footer>
+    </div>
+
+    <div class="help-link">
+        <a href="#">Help Me Log In To My Account</a>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            const showPasswordText = document.querySelector(".show-password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                showPasswordText.textContent = "Hide Password";
+            } else {
+                passwordField.type = "password";
+                showPasswordText.textContent = "Show Password";
+            }
+        }
+    </script>
+</body>
+</html>

