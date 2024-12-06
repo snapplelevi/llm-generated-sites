@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Fidelity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        .top-bar {
+            width: 100%;
+            background-color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .top-bar img {
+            height: 30px;
+        }
+        .top-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            color: grey;
+            margin-left: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn {
+            background-color: #28a745; /* Grass green color */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: grey;
+            text-align: left;
+        }
+        .footer a {
+            color: grey;
+            text-decoration: underline;
+        }
+        .additional-info {
+            margin-top: 20px;
+            font-size: 14px;
+            color: grey;
+            text-align: center;
+        }
+        .additional-info a {
+            color: grey;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <img src="https://digital.fidelity.com/stgw/digital/login/dist/Fidelity-wordmark.svg" alt="Fidelity Logo">
+        <div>
+            <button>Security</button>
+            <button>FAQs</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-title">Log In</div>
+        <form>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <button type="submit" class="btn">Log In</button>
+        </form>
+        <div class="footer">
+            <a href="#">Forgot username or password?</a>
+        </div>
+    </div>
+    <div class="additional-info">
+        New to Fidelity? <a href="#">Open an account</a> or <a href="#">sign up</a>.
+    </div>
+</body>
+</html>

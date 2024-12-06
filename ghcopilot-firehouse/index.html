@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Firehouse Subs</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        main {
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .instructions {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .required {
+            color: red;
+            margin-left: 5px;
+        }
+        input[type="email"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: transparent;
+            color: grey;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: #f4f4f4;
+        }
+        .checkbox-container {
+            margin-top: 20px;
+            margin-bottom: 20px; /* Added margin-bottom for spacing */
+        }
+        .checkbox-container label {
+            font-weight: normal;
+        }
+        .checkbox-container a {
+            color: red;
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <p>Enter your email address.</p>
+        <p>Then proceed to log in or register</p>
+    </div>
+    <main>
+        <form action="#" method="post">
+            <label for="email">Email address<span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">By checking this box, you acknowledge that you have read and agree to our <a href="#">Terms of Service</a> including the mandatory arbitration clause, <a href="#">Privacy Policy</a> and <a href="#">Firehouse Rewards Terms</a></label>
+            </div>
+            <input type="submit" value="Sign Up / Login">
+        </form>
+    </main>
+    <footer>
+        &copy; 2023 Firehouse Subs. All rights reserved.
+    </footer>
+</body>
+</html>

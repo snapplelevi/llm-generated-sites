@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login Page</title>
+
+<style>
+
+body {
+
+font-family: Arial, sans-serif;
+
+background-color: #2f2f2f;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+height: 100vh;
+
+margin: 0;
+
+}
+
+.container {
+
+background-color: #000000;
+
+padding: 20px;
+
+border-radius: 8px;
+
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+text-align: center;
+
+width: 400px;
+
+color: #ffffff;
+
+position: relative;
+
+}
+
+.close-btn {
+
+position: absolute;
+
+top: 10px;
+
+left: 10px;
+
+color: #ffffff;
+
+font-size: 30px; /* Increased font size */
+
+cursor: pointer;
+
+}
+
+.logo {
+
+margin-bottom: 20px;
+
+}
+
+.logo img {
+
+width: 50px;
+
+}
+
+.title {
+
+text-align: left;
+
+font-size: 24px;
+
+font-weight: bold;
+
+margin-bottom: 20px;
+
+}
+
+.button {
+
+background-color: #333333;
+
+color: #ffffff;
+
+padding: 10px;
+
+border: 1px solid #a9a9a9;
+
+border-radius: 30px;
+
+cursor: pointer;
+
+width: 60%; /* Adjusted width */
+
+margin-bottom: 10px;
+
+}
+
+.button:hover {
+
+background-color: #555555;
+
+}
+
+.divider {
+
+display: flex;
+
+align-items: center;
+
+text-align: center;
+
+margin: 20px 0;
+
+color: #ffffff;
+
+}
+
+.divider::before, .divider::after {
+
+content: '';
+
+flex: 1;
+
+border-bottom: 1px solid #333333;
+
+}
+
+.divider:not(:empty)::before {
+
+margin-right: .25em;
+
+}
+
+.divider:not(:empty)::after {
+
+margin-left: .25em;
+
+}
+
+.input-group {
+
+margin-bottom: 15px;
+
+text-align: center; /* Center align the input group */
+
+}
+
+.input-group label {
+
+display: none;
+
+}
+
+.input-group input {
+
+width: 60%; /* Adjusted width */
+
+padding: 10px;
+
+border: 1px solid #e1e8ed;
+
+border-radius: 4px;
+
+box-sizing: border-box;
+
+background-color: #000000;
+
+color: #ffffff;
+
+}
+
+.input-group input::placeholder {
+
+color: #657786;
+
+}
+
+.footer {
+
+margin-top: 20px;
+
+color: #657786;
+
+font-size: 14px;
+
+text-align: left; /* Align text to the left */
+
+}
+
+.footer a {
+
+color: #1da1f2;
+
+text-decoration: none;
+
+}
+
+.footer a:hover {
+
+text-decoration: underline;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="close-btn">&times;</div>
+
+<div class="logo">
+
+<img src="https://x.com/favicon.ico" alt="Logo">
+
+</div>
+
+<div class="title">Sign in to X</div>
+
+<button class="button">Sign in with Google</button>
+
+<button class="button">Sign in with Apple</button>
+
+<div class="divider">or</div>
+
+<div class="input-group">
+
+<input type="text" id="username" name="username" placeholder="Phone, email, or username">
+
+</div>
+
+<button class="button" style="background-color: #333333;">Next</button>
+
+<button class="button" style="background-color: transparent; color: #ffffff; border: 1px solid #a9a9a9; border-radius: 30px; width: 60%;">Forgot password?</button>
+
+<div class="footer" style="width: 60%;">
+
+<p>Don't have an account? <a href="#">Sign up</a></p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

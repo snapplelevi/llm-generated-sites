@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Aid Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=News+Cycle&family=Noto+Serif&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'News Cycle', sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f1f1f1;
+            color: black;
+            padding: 20px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .btn {
+            background-color: #005ea2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'News Cycle', sans-serif;
+            width: 100%;
+            display: block;
+            margin: 20px auto;
+            font-weight: bold;
+        }
+        .menu-btn {
+            background: none;
+            border: none;
+            color: #666;
+            font-family: 'News Cycle', sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        label {
+            font-family: 'Noto Serif', serif;
+            display: block;
+            margin-bottom: 5px;
+            font-weight: normal;
+            color: #333;
+        }
+        .password-container {
+            position: relative;
+        }
+        .password-container input {
+            padding-right: 100px;
+        }
+        .password-container::after {
+            content: 'Show Password';
+            position: absolute;
+            right: 10px;
+            bottom: 8px;
+            color: #666;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .centered-link {
+            display: inline-block;
+            color: #0071bc;
+            text-decoration: none;
+        }
+        .forgot-links {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .forgot-links .centered-link:first-child::after {
+            content: '|';
+            margin: 0 10px;
+            color: #666;
+        }
+        .bold-link {
+            font-weight: bold;
+            margin-top: 30px;
+            display: block;
+            text-align: center;
+        }
+        .input-field {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #999;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        h2 {
+            color: #000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 style="margin: 0; text-align: left; font-weight: normal;">Federal <strong>Student</strong> <span style="color: #4caf50;">Aid</span></h1>
+        <button class="menu-btn">MENU</button>
+    </div>
+    <div class="container">
+        <h2>Log In</h2>
+        <form>
+            <div style="margin-bottom: 15px;">
+                <label for="username">Email, Phone, or FSA ID Username</label>
+                <input type="text" id="username" name="username" class="input-field">
+            </div>
+            <div style="margin-bottom: 15px;" class="password-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="input-field">
+            </div>
+            <button type="submit" class="btn">Log In</button>
+        </form>
+        <div class="forgot-links">
+            <a href="#" class="centered-link">Forgot my Username</a>
+            <a href="#" class="centered-link">Forgot my Password</a>
+        </div>
+        <a href="#" class="centered-link bold-link">Create an Account</a>
+    </div>
+    <a href="#" class="centered-link" style="display: block; text-align: center; text-decoration: underline;">Help Me Log In to My Account</a>
+</body>
+</html>
